@@ -30,7 +30,7 @@ int main(int argc, char* argv[]){
 		long int actual = 1;
 		long int siguiente = 0;
 		while(count <= 50) {
-                       std::cout << "Valor Fibonacci: " << actual <<  " - PPID = " << getpid() << std::endl;
+                       std::cout << "Valor Fibonacci: " << actual <<  " - PPIDE = " << getpid() << std::endl;
                        siguiente = actual + anterior;
                        anterior = actual;
                        actual = siguiente;
