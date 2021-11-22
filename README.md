@@ -9,7 +9,7 @@ fibonacci y un proceso hijo que muestre la serie de números impares, los cuales
 ##  Mode de uso de la solución
 > *Para utilizar la solución implementada, se deben seguir los siguientes pasos en consola(se considera que se tiene el CLI de github en su dispositivo):*
 1. Seleccionar o crear una carpeta para crear el repositorio, entrar a esta mediante consola y ejecutar el comando **git clone https://github.com/SAGITOR/SSOO-tarea03.git**.
-2. Entrar a la carpeta src que se obtendra de la clonacion del repositorio mediante el comando **cd SSOO-tarea03/src** en consola.
+2. Entrar a la carpeta que se obtendra de la clonacion del repositorio mediante el comando **cd SSOO-tarea03** en consola.
 3. Ejecutar el comando **make** en consola, el cual creara un ejecutable llamado main.
 4. Ejecutar el comando ./main (para linux) o main.exe (para windows).
 
