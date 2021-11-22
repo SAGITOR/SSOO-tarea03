@@ -26,9 +26,9 @@ int main(int argc, char* argv[]){
 	std::signal(SIGUSR2, signal_handler);
 	if (result > 0 ){
 
-		int anterior = 0;
-		int actual = 1;
-		int siguiente = 0;
+		long int anterior = 0;
+		long int actual = 1;
+		long int siguiente = 0;
 		while(count <= 50) {
                        std::cout << "Valor Fibonacci: " << actual <<  " - PPID = " << getpid() << std::endl;
                        siguiente = actual + anterior;

@@ -1,39 +1,32 @@
-CC=gcc
-CXX=g++
-RM=rm -f
+#
+# Seccion 1
+#
+# Esta seccion se puede modificar segun
+# los requerimientos de su proyecto
 
-TARGET=./main
+CC=g++
+SRC=$(wildcard */*.cc)
+CFLAGS=-std=c17 -Wall -D_POSIX_C_SOURCE=200809L
+#LIBS=-ldl
 
 
-INCLUDES=-I./include -I.
-LDFLAGS=-L/usr/local/lib 
-LDLIBS=-lpthread
+BIN=main
+#
+# Seccion 2 (NO MODIFICAR!!!)
+#
+OBJ=$(SRC:.c=.o)
 
-CXXFLAGS=-std=c++17 -Wall -O2
-
-DIR_OBJ=src
-SRCS=$(wildcard *.cc)
-
-OBJS=$(patsubst %.cc,$(DIR_OBJ)/%.o,$(SRCS))
-
-all: $(TARGET)
+all:  $(BIN)
 	@echo Made [ $? ] OK :\)
 
-$(TARGET): $(OBJS)
-	@echo Linking $(SRCS)
-	@$(CXX) -o $@ $^ $(CXXFLAGS) $(LDLIBS) $(LDFLAGS) 
-
-$(DIR_OBJ)/%.o: %.cc
-	@echo Compiling [$@]
-	@mkdir -p $(DIR_OBJ)
-	@$(CXX) -c -o $@ $< $(CXXFLAGS) $(INCLUDES)
+$(BIN): $(OBJ)
+	@echo Made $(OBJ)
+	$(CC) $(LIBS) $(OBJ) -o $(@)
+	
+%.o: %.c
+	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	@$(RM) $(OBJS)
-	@$(RM) *~ core
-
-distclean: clean
-	@$(RM) $(TARGET)
-	@$(RM) -r $(DIR_OBJ)
-
-.PHONY: all clean distclean
+	@rm -f $(OBJ)
+	@rm -f *~
+	@rm -f $(BIN)
