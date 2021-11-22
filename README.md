@@ -12,9 +12,6 @@ fibonacci y un proceso hijo que muestre la serie de números impares, los cuales
 2. Entrar a la carpeta que se obtendra de la clonacion del repositorio mediante el comando **cd SSOO-tarea03** en consola.
 3. Ejecutar el comando **make** en consola, el cual creara un ejecutable llamado main.
 4. Ejecutar el comando ./main (para linux) o main.exe (para windows).
-
-Nota: *En la ejecución del comando make, se eliminare el archivo tarea03.cc. Se desconoce la razón de este suceso, ya que el codigo referente del **makefile** utilizado es el mostrado 
-en el github de la asignatura y solo se edito la parte en la cual se indica el nombre del archivo.*
 ##  Autor
 > **Nombre:** *Marco Vivar De La Cruz*  
 >**Correo:** *marco.vivar@alumnos.uv.cl*
